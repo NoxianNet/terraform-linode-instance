@@ -6,6 +6,7 @@ variable "location" {
 
 variable "os_image" {
   description = "image id to deploy"
+  type = string
 }
 
 variable "machine_type" {
