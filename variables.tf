@@ -4,10 +4,19 @@ variable "location" {
   type = string
 }
 
+variable "os_image" {
+  description = "image id to deploy"
+}
+
 variable "machine_type" {
   description = "the type of machine to provision for the linode instance"
   default = "g6-standard-1"
   type = string
+}
+
+variable "disk_size" {
+  description = "the size to assign the linode disk volume in MB"
+  type = number
 }
 
 variable "name_addition" {
@@ -15,14 +24,13 @@ variable "name_addition" {
   type = string
 }
 
-locals {
-  deployment_id = random_string.suffix.result
-  name_addition = var.name_addition == "" ? "" : var.name_addition
-  name = "${local.name_addition}-${var.location}-${local.deployment_id}"
-  labels = {
-    terraform     = "true"
-    deployment_id = local.deployment_id
-    instance_name = local.name
-    region        = var.location
-  }
+variable "additional_tags" {
+  type = map(string)
+  description = "tags to add to the to the linode instance"
+  default = {}
+}
+
+variable "root_password" {
+  description = "Set a root password for the linode otherwise it will random"
+  default = ""
 }
