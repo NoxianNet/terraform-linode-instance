@@ -42,7 +42,7 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | This is the location where the Linode is deployed. | `string` | `"us-east"` | no |
 | <a name="input_machine_type"></a> [machine\_type](#input\_machine\_type) | the type of machine to provision for the linode instance | `string` | `"g6-standard-1"` | no |
 | <a name="input_name_addition"></a> [name\_addition](#input\_name\_addition) | name to give the machine | `string` | n/a | yes |
-| <a name="input_os_image"></a> [os\_image](#input\_os\_image) | image id to deploy | `any` | n/a | yes |
+| <a name="input_os_image"></a> [os\_image](#input\_os\_image) | image id to deploy | `string` | n/a | yes |
 | <a name="input_root_password"></a> [root\_password](#input\_root\_password) | Set a root password for the linode otherwise it will random | `string` | `""` | no |
 
 ## Outputs
