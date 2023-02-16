@@ -49,8 +49,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_deployment_id"></a> [deployment\_id](#output\_deployment\_id) | n/a |
-| <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | n/a |
-| <a name="output_password"></a> [password](#output\_password) | n/a |
-| <a name="output_private_ssh_key"></a> [private\_ssh\_key](#output\_private\_ssh\_key) | n/a |
+| <a name="output_deployment_id"></a> [deployment\_id](#output\_deployment\_id) | The deployment ID of the linode instance given by this module |
+| <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The ID of the Linode instance |
+| <a name="output_password"></a> [password](#output\_password) | The root password |
+| <a name="output_private_ssh_key"></a> [private\_ssh\_key](#output\_private\_ssh\_key) | the private ssh key |
 <!-- END_TF_DOCS -->
