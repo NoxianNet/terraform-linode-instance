@@ -13,8 +13,6 @@ resource "linode_volume" "instance_volume" {
 }
 
 resource "linode_instance_disk" "instance_boot_disk" {
-  region = var.location
-
   label = concat("boot-disk-id-",local.deployment_id)
   linode_id = linode_instance.instance.id
 
