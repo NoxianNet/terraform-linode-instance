@@ -52,5 +52,7 @@ No modules.
 | <a name="output_deployment_id"></a> [deployment\_id](#output\_deployment\_id) | The deployment ID of the linode instance given by this module |
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The ID of the Linode instance |
 | <a name="output_password"></a> [password](#output\_password) | The root password |
+| <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private ip address of the linode instance |
 | <a name="output_private_ssh_key"></a> [private\_ssh\_key](#output\_private\_ssh\_key) | the private ssh key |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public ip address of the linode instance |
 <!-- END_TF_DOCS -->
