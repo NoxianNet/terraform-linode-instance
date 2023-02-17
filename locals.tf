@@ -8,7 +8,7 @@ locals {
     terraform     = "true"
     deployment_id = local.deployment_id
     instance_name = local.name
-    region        = var.location
+    location        = var.location
     machine_type  = var.machine_type
   }
 }

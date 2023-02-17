@@ -19,3 +19,13 @@ output "private_ssh_key" {
   sensitive = true
   description = "the private ssh key"
 }
+
+output "public_ip" {
+  value = linode_instance.instance.ip_address
+  description = "The public ip address of the linode instance"
+}
+
+output "private_ip" {
+  value = linode_instance.instance.private_ip_address
+  description = "The private ip address of the linode instance"
+}
