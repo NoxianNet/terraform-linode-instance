@@ -10,14 +10,14 @@ resource "linode_instance" "instance" {
 resource "linode_volume" "instance_volume" {
   label  = "disk-${local.deployment_id}"
   region = var.location
-  size = 20
+  size = var.disk_size
 }
 
 resource "linode_instance_disk" "instance_boot_disk" {
   label = "boot-disk-${local.deployment_id}"
   linode_id = linode_instance.instance.id
 
-  size = var.disk_size
+  size = 15000 # in MB
   image = var.os_image
 
   authorized_keys = [chomp(tls_private_key.ssh.public_key_openssh)]
