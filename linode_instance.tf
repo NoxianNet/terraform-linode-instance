@@ -1,4 +1,4 @@
-resource "linode_instance" "instance" {
+resource "linode_instance" "this" {
   label      = local.name
   tags       = local.tags
   region     = var.location
@@ -7,15 +7,15 @@ resource "linode_instance" "instance" {
   group      = local.deployment_id
 }
 
-resource "linode_volume" "instance_volume" {
+resource "linode_volume" "this_volume" {
   label  = "disk-${local.deployment_id}"
   region = var.location
   size = var.disk_size
 }
 
-resource "linode_instance_disk" "instance_boot_disk" {
+resource "linode_instance_disk" "this_boot_disk" {
   label = "boot-disk-${local.deployment_id}"
-  linode_id = linode_instance.instance.id
+  linode_id = linode_instance.this.id
 
   size = 15000 # in MB
   image = var.os_image
@@ -27,14 +27,14 @@ resource "linode_instance_disk" "instance_boot_disk" {
 
 resource "linode_instance_config" "instance_boot_config" {
   label = "boot-config-${local.deployment_id}"
-  linode_id = linode_instance.instance.id
+  linode_id = linode_instance.this.id
 
   devices {
     sda {
-      disk_id = linode_instance_disk.instance_boot_disk.id
+      disk_id = linode_instance_disk.this_boot_disk.id
     }
     sdb {
-      volume_id = linode_volume.instance_volume.id
+      volume_id = linode_volume.this_volume.id
     }
   }
 

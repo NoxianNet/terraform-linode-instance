@@ -4,7 +4,7 @@ output "deployment_id" {
 }
 
 output "instance_id" {
-  value = linode_instance.instance.id
+  value = linode_instance.this.id
   description = "The ID of the Linode instance"
 }
 
