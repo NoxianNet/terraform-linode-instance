@@ -6,10 +6,10 @@ resource "random_string" "suffix" {
 }
 
 resource "random_password" "root_password" {
-  length = 32
-  special = true
-  min_lower = 4
+  length      = 32
+  special     = true
+  min_lower   = 4
   min_special = 2
   min_numeric = 4
-  min_upper = 4
+  min_upper   = 4
 }

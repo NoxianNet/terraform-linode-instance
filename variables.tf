@@ -1,37 +1,37 @@
 variable "location" {
   description = "This is the location where the Linode is deployed.\n"
-  default = "us-east"
-  type = string
+  default     = "us-east"
+  type        = string
 }
 
 variable "os_image" {
   description = "image id to deploy"
-  type = string
+  type        = string
 }
 
 variable "machine_type" {
   description = "the type of machine to provision for the linode instance"
-  default = "g6-standard-1"
-  type = string
+  default     = "g6-standard-1"
+  type        = string
 }
 
 variable "disk_size" {
   description = "the size to assign the linode disk volume in MB"
-  type = number
+  type        = number
 }
 
 variable "name" {
   description = "name to give the machine"
-  type = string
+  type        = string
 }
 
 variable "additional_tags" {
-  type = map(string)
+  type        = map(string)
   description = "tags to add to the to the linode instance"
-  default = {}
+  default     = {}
 }
 
 variable "root_password" {
   description = "Set a root password for the linode otherwise it will random"
-  default = ""
+  default     = ""
 }
