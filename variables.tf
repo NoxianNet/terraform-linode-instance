@@ -20,7 +20,7 @@ variable "disk_size" {
   type        = number
 }
 
-variable "name_addition" {
+variable "name" {
   description = "name to give the machine"
   type        = string
 }
