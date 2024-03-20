@@ -2,14 +2,14 @@ terraform {
   required_providers {
     linode = {
       source = "linode/linode"
-      version = ">= 1.30.0"
+      version = "~> 2.0"
     }
   }
 }
 
 module "test_instance" {
   source = "../"
-  name_addition = "linode_test"
+  name = "linode_test"
   disk_size = 3000
   os_image = "linode/centos-stream9"
   additional_tags = {

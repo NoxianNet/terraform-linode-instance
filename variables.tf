@@ -25,6 +25,12 @@ variable "name" {
   type        = string
 }
 
+variable "id_in_name" {
+  description = "whether to include the id in the name"
+  type        = bool
+  default     = true
+}
+
 variable "additional_tags" {
   type        = map(string)
   description = "tags to add to the to the linode instance"
@@ -34,4 +40,9 @@ variable "additional_tags" {
 variable "root_password" {
   description = "Set a root password for the linode otherwise it will random"
   default     = ""
+}
+
+variable "public_ssh_key" {
+    description = "The public ssh key to add to the linode\nIf none added a random key will be generated"
+    default     = []
 }
