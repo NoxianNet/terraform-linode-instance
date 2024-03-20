@@ -39,10 +39,12 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | tags to add to the to the linode instance | `map(string)` | `{}` | no |
 | <a name="input_disk_size"></a> [disk\_size](#input\_disk\_size) | the size to assign the linode disk volume in MB | `number` | n/a | yes |
+| <a name="input_id_in_name"></a> [id\_in\_name](#input\_id\_in\_name) | whether to include the id in the name | `bool` | `true` | no |
 | <a name="input_location"></a> [location](#input\_location) | This is the location where the Linode is deployed. | `string` | `"us-east"` | no |
 | <a name="input_machine_type"></a> [machine\_type](#input\_machine\_type) | the type of machine to provision for the linode instance | `string` | `"g6-standard-1"` | no |
 | <a name="input_name"></a> [name](#input\_name) | name to give the machine | `string` | n/a | yes |
 | <a name="input_os_image"></a> [os\_image](#input\_os\_image) | image id to deploy | `string` | n/a | yes |
+| <a name="input_public_ssh_key"></a> [public\_ssh\_key](#input\_public\_ssh\_key) | The public ssh key to add to the linode<br>If none added a random key will be generated | `list` | `[]` | no |
 | <a name="input_root_password"></a> [root\_password](#input\_root\_password) | Set a root password for the linode otherwise it will random | `string` | `""` | no |
 
 ## Outputs
