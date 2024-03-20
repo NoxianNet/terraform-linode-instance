@@ -1,10 +1,9 @@
 resource "linode_instance" "this" {
-  label      = local.name
+  label      = var.id_in_name ? "${var.name}-${local.deployment_id}" : var.name
   tags       = local.tags
   region     = var.location
   type       = var.machine_type
   private_ip = true
-  group      = local.deployment_id
 }
 
 resource "linode_volume" "this_volume" {
@@ -20,7 +19,7 @@ resource "linode_instance_disk" "this_boot_disk" {
   size  = 15000 # in MB
   image = var.os_image
 
-  authorized_keys = [chomp(tls_private_key.ssh.public_key_openssh)]
+  authorized_keys = var.public_ssh_key == [] ? [chomp(tls_private_key.ssh.public_key_openssh)]: var.public_ssh_key
   root_pass       = var.root_password != "" ? var.root_password : random_password.root_password.result
 
 }
