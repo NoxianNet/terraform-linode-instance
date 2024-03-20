@@ -55,5 +55,5 @@ No modules.
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The ID of the Linode instance |
 | <a name="output_password"></a> [password](#output\_password) | The root password |
 | <a name="output_private_ssh_key"></a> [private\_ssh\_key](#output\_private\_ssh\_key) | the private ssh key |
-| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | n/a |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address of the Linode instance |
 <!-- END_TF_DOCS -->
