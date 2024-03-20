@@ -21,5 +21,5 @@ output "private_ssh_key" {
 }
 
 output "public_ip" {
-  value = linode_instance.this.ipv4
+  value = linode_instance.this.ip_address
 }
