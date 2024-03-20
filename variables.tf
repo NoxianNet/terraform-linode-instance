@@ -43,6 +43,6 @@ variable "root_password" {
 }
 
 variable "public_ssh_key" {
-    description = "The public ssh key to add to the linode\nIf none added a random key will be generated"
-    default     = []
+  description = "The public ssh key to add to the linode\nIf none added a random key will be generated"
+  default     = []
 }

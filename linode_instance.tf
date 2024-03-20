@@ -19,7 +19,7 @@ resource "linode_instance_disk" "this_boot_disk" {
   size  = 15000 # in MB
   image = var.os_image
 
-  authorized_keys = var.public_ssh_key == [] ? [chomp(tls_private_key.ssh.public_key_openssh)]: var.public_ssh_key
+  authorized_keys = var.public_ssh_key == [] ? [chomp(tls_private_key.ssh.public_key_openssh)] : var.public_ssh_key
   root_pass       = var.root_password != "" ? var.root_password : random_password.root_password.result
 
 }
