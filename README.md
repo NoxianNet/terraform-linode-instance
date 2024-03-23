@@ -38,6 +38,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | tags to add to the to the linode instance | `map(string)` | `{}` | no |
+| <a name="input_boot_disk_size"></a> [boot\_disk\_size](#input\_boot\_disk\_size) | The size of the boot disk in MB | `number` | `15000` | no |
 | <a name="input_disk_size"></a> [disk\_size](#input\_disk\_size) | the size to assign the linode disk volume in MB | `number` | n/a | yes |
 | <a name="input_id_in_name"></a> [id\_in\_name](#input\_id\_in\_name) | whether to include the id in the name | `bool` | `true` | no |
 | <a name="input_location"></a> [location](#input\_location) | This is the location where the Linode is deployed. | `string` | `"us-east"` | no |
@@ -55,5 +56,5 @@ No modules.
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The ID of the Linode instance |
 | <a name="output_password"></a> [password](#output\_password) | The root password |
 | <a name="output_private_ssh_key"></a> [private\_ssh\_key](#output\_private\_ssh\_key) | the private ssh key |
-| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | n/a |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address of the Linode instance |
 <!-- END_TF_DOCS -->
