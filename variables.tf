@@ -15,7 +15,7 @@ variable "machine_type" {
   type        = string
 }
 
-variable "disk_size" {
+variable "volume_disk_size" {
   description = "the size to assign the linode disk volume in MB"
   type        = number
 }
