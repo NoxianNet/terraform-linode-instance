@@ -16,7 +16,7 @@ resource "linode_instance_disk" "this_boot_disk" {
   label     = "boot-disk-${local.deployment_id}"
   linode_id = linode_instance.this.id
 
-  size  = 15000 # in MB
+  size  = var.boot_disk_size
   image = var.os_image
 
   authorized_keys = var.public_ssh_key == [] ? [chomp(tls_private_key.ssh.public_key_openssh)] : var.public_ssh_key
