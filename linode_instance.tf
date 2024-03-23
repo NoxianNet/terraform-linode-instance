@@ -9,7 +9,7 @@ resource "linode_instance" "this" {
 resource "linode_volume" "this_volume" {
   label  = "disk-${local.deployment_id}"
   region = var.location
-  size   = var.disk_size
+  size   = var.volume_disk_size
 }
 
 resource "linode_instance_disk" "this_boot_disk" {
