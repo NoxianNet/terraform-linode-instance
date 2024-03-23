@@ -46,3 +46,8 @@ variable "public_ssh_key" {
   description = "The public ssh key to add to the linode\nIf none added a random key will be generated"
   default     = []
 }
+
+variable "boot_disk_size" {
+  description = "The size of the boot disk in MB"
+  default     = 15000
+}
